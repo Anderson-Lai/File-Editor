@@ -1,3 +1,5 @@
+Simple text editor
+
 Change directory into the folder after cloning.
 Compile the executable with gcc main.c.
 Open the text editor with .\a [file name].
