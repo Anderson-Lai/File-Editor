@@ -8,5 +8,5 @@ You will need to ignore any warnings Windows Defender gives. <br>
 Source code is in the File Editor folder. <br>
 
 ## **Commands**
-$ help - get a list of commands
-$ exit - exit the text editor
+$ help - get a list of commands <br>
+$ exit - exit the text editor <br>
