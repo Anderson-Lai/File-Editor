@@ -1,6 +1,7 @@
 # **A simple text editor written in c**
 
-Change directory into the folder after cloning.
-Compile the executable with gcc main.c.
-Open the text editor with .\a [file name].
-A file will be created if a file with that name can not be found in the same directory as the executable.
+Download the a.exe file in the File Editor folder.
+  Run the exe file with the file you want to open with .\a [file name].
+  Ensure that the file is in the same directory as the executable.
+  You will need to ignore any warnings Windows Defender gives.
+  Source code is in the File Editor folder.
