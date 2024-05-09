@@ -43,10 +43,11 @@ void handleCommand(char* fullCommand, FILE* file, char* fileName) {
 		delete(line, file, fileName);
 	}
 	else if (!strcmp(pos, "help\n")) {
-		printf("$ add [text]:  write the text of file\n");
+		printf("$ add [text]:  add the text to the end of the file\n");
 		printf("$ read:  read entire file\n");
 		printf("$ edit [line number] [text]:  edit the line number's text to inputted text\n");
 		printf("$ delete [line number]:  delete the line number's text\n");
+		printf("$ exit:  exit the text editor\n");
 	}
 	// command not found
 	else {
