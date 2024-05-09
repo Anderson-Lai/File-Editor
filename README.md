@@ -1,4 +1,4 @@
-Simple text editor
+#**A simple text editor written in c**
 
 Change directory into the folder after cloning.
 Compile the executable with gcc main.c.
