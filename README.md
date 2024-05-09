@@ -6,3 +6,7 @@ Ensure that the text file you want to open is the same directory as the executab
 Run the exe file with the file you want to open with .\a [file name]. <br>
 You will need to ignore any warnings Windows Defender gives. <br>
 Source code is in the File Editor folder. <br>
+
+## **Commands**
+$ help - get a list of commands
+$ exit - exit the text editor
