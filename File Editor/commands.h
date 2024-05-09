@@ -1,9 +1,6 @@
-#include <stdio.h>
-#include <string.h>
-
 #include "actions.h"
 
-void handleCommand(char* fullCommand, FILE* file) {
+void handleCommand(char* fullCommand, FILE* file, char* fileName) {
 
 	// splitting the command
 	char* nextToken = nullptr;
@@ -16,27 +13,37 @@ void handleCommand(char* fullCommand, FILE* file) {
 	}
 
 	// control flow
-	if (!strcmp(pos, "new")) {
-		// text
+	if (!strcmp(pos, "add")) {
+		// get the text
 		pos = strtok_s(nullptr, "", &nextToken);
 
-		new(pos, file);
+		add(pos, file);
 	}
 	// add '\n' as pos will read the entire string
 	else if (!strcmp(pos, "read\n")) {
+
 		read(file);
 	}
 	else if (!strcmp(pos, "edit")) {
-		// line number; text
-		pos = strtok_s(NULL, " ", &nextToken);
 
+		// get the line number and text
+		pos = strtok_s(nullptr, " ", &nextToken);
+		int line = atoi(pos);
+
+		pos = strtok_s(nullptr, "", &nextToken);
+
+		edit(line, pos, file, fileName);
 	}
 	else if (!strcmp(pos, "delete")) {
-		// line number
+		
+		// get the line number
+		pos = strtok_s(nullptr, " ", &nextToken);
+		int line = atoi(pos);
 
+		delete(line, file, fileName);
 	}
 	else if (!strcmp(pos, "help\n")) {
-		printf("$ new [text]:  write the text of file\n");
+		printf("$ add [text]:  write the text of file\n");
 		printf("$ read:  read entire file\n");
 		printf("$ edit [line number] [text]:  edit the line number's text to inputted text\n");
 		printf("$ delete [line number]:  delete the line number's text\n");

@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 
 #define _CRTDBG_MAP_ALLOC
 #include <crtdbg.h>
@@ -67,7 +68,7 @@ int main(int argc, char** argv)
             break;
         }
 
-        handleCommand(buffer, file);
+        handleCommand(buffer, file, argv[1]);
     }
 
     return 0;
